@@ -1,0 +1,97 @@
+L,N,LgramLength,Algorithm name,Criteria name,False Negative
+10,10000,1,vigenereMonogram,Criteria 3.0,0.422
+100,10000,1,vigenereMonogram,Criteria 3.0,0.000
+1000,10000,1,vigenereMonogram,Criteria 3.0,0.000
+1000,10000,1,vigenereMonogram,Criteria 3.0,0.000
+10000,1000,1,vigenereMonogram,Criteria 3.0,0.000
+
+10,10000,1,vigenereBigram,Criteria 3.0,0.384
+100,10000,1,vigenereBigram,Criteria 3.0,0.000
+1000,10000,1,vigenereBigram,Criteria 3.0,0.000
+1000,10000,1,vigenereBigram,Criteria 3.0,0.000
+10000,1000,1,vigenereBigram,Criteria 3.0,0.000
+
+10,10000,2,vigenereMonogram,Criteria 3.0,0.001
+100,10000,2,vigenereMonogram,Criteria 3.0,1.000
+1000,10000,2,vigenereMonogram,Criteria 3.0,1.000
+1000,10000,2,vigenereMonogram,Criteria 3.0,1.000
+10000,1000,2,vigenereMonogram,Criteria 3.0,1.000
+
+10,10000,2,vigenereBigram,Criteria 3.0,0.000
+100,10000,2,vigenereBigram,Criteria 3.0,1.000
+1000,10000,2,vigenereBigram,Criteria 3.0,1.000
+1000,10000,2,vigenereBigram,Criteria 3.0,1.000
+10000,1000,2,vigenereBigram,Criteria 3.0,1.000
+
+10,10000,1,affineMonogram,Criteria 3.0,0.751
+100,10000,1,affineMonogram,Criteria 3.0,0.249
+1000,10000,1,affineMonogram,Criteria 3.0,0.252
+1000,10000,1,affineMonogram,Criteria 3.0,0.252
+10000,1000,1,affineMonogram,Criteria 3.0,0.215
+
+10,10000,1,affineBigram,Criteria 3.0,0.559
+100,10000,1,affineBigram,Criteria 3.0,0.023
+1000,10000,1,affineBigram,Criteria 3.0,0.015
+1000,10000,1,affineBigram,Criteria 3.0,0.014
+10000,1000,1,affineBigram,Criteria 3.0,0.008
+
+10,10000,2,affineMonogram,Criteria 3.0,0.096
+100,10000,2,affineMonogram,Criteria 3.0,0.795
+1000,10000,2,affineMonogram,Criteria 3.0,0.808
+1000,10000,2,affineMonogram,Criteria 3.0,0.813
+10000,1000,2,affineMonogram,Criteria 3.0,0.821
+
+10,10000,2,affineBigram,Criteria 3.0,0.012
+100,10000,2,affineBigram,Criteria 3.0,0.954
+1000,10000,2,affineBigram,Criteria 3.0,0.972
+1000,10000,2,affineBigram,Criteria 3.0,0.977
+10000,1000,2,affineBigram,Criteria 3.0,0.982
+
+10,10000,1,uniformMonogram,Criteria 3.0,0.378
+100,10000,1,uniformMonogram,Criteria 3.0,0.000
+1000,10000,1,uniformMonogram,Criteria 3.0,0.000
+1000,10000,1,uniformMonogram,Criteria 3.0,0.000
+10000,1000,1,uniformMonogram,Criteria 3.0,0.000
+
+10,10000,1,uniformBigram,Criteria 3.0,0.143
+100,10000,1,uniformBigram,Criteria 3.0,0.000
+1000,10000,1,uniformBigram,Criteria 3.0,0.000
+1000,10000,1,uniformBigram,Criteria 3.0,0.000
+10000,1000,1,uniformBigram,Criteria 3.0,0.000
+
+10,10000,2,uniformMonogram,Criteria 3.0,0.000
+100,10000,2,uniformMonogram,Criteria 3.0,1.000
+1000,10000,2,uniformMonogram,Criteria 3.0,1.000
+1000,10000,2,uniformMonogram,Criteria 3.0,1.000
+10000,1000,2,uniformMonogram,Criteria 3.0,1.000
+
+10,10000,2,uniformBigram,Criteria 3.0,0.000
+100,10000,2,uniformBigram,Criteria 3.0,1.000
+1000,10000,2,uniformBigram,Criteria 3.0,1.000
+1000,10000,2,uniformBigram,Criteria 3.0,1.000
+10000,1000,2,uniformBigram,Criteria 3.0,1.000
+
+10,10000,1,recurrentMonogram,Criteria 3.0,1.000
+100,10000,1,recurrentMonogram,Criteria 3.0,0.238
+1000,10000,1,recurrentMonogram,Criteria 3.0,0.258
+1000,10000,1,recurrentMonogram,Criteria 3.0,0.242
+10000,1000,1,recurrentMonogram,Criteria 3.0,0.224
+
+10,10000,1,recurrentBigram,Criteria 3.0,0.363
+100,10000,1,recurrentBigram,Criteria 3.0,0.000
+1000,10000,1,recurrentBigram,Criteria 3.0,0.001
+1000,10000,1,recurrentBigram,Criteria 3.0,0.001
+10000,1000,1,recurrentBigram,Criteria 3.0,0.001
+
+10,10000,2,recurrentMonogram,Criteria 3.0,0.125
+100,10000,2,recurrentMonogram,Criteria 3.0,0.131
+1000,10000,2,recurrentMonogram,Criteria 3.0,0.129
+1000,10000,2,recurrentMonogram,Criteria 3.0,0.121
+10000,1000,2,recurrentMonogram,Criteria 3.0,0.117
+
+10,10000,2,recurrentBigram,Criteria 3.0,0.002
+100,10000,2,recurrentBigram,Criteria 3.0,0.999
+1000,10000,2,recurrentBigram,Criteria 3.0,0.999
+1000,10000,2,recurrentBigram,Criteria 3.0,0.999
+10000,1000,2,recurrentBigram,Criteria 3.0,0.999
+

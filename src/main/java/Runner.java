@@ -1,18 +1,104 @@
+import java.io.IOException;
+
 public class Runner {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     DataContainer data = new DataContainer();
-    String[] tenCharText = data.prepareTexts(1000, 10000);
-    for (int i = 0; i < tenCharText.length; i++) {
-      int alpha = CreterionContainer.crt0x0(2, tenCharText[i], DataContainer.frequencySymbols,
-          DataContainer.bigramsFrequency);
-      if (i < 10000 && alpha == 1) {
-        CreterionContainer.falseNegative++;
-      }
-      if (i >= 10000 && alpha == 0) {
-        CreterionContainer.falsePositive++;
-      }
-    }
-    System.out.println("alpha = " + CreterionContainer.falseNegative);
-    System.out.println("beta = " + CreterionContainer.falsePositive);
+    Writer.write(data, 1, 10, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "vigenereMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "vigenereBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "vigenereMonogram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "vigenereMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "vigenereBigram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "vigenereBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "affineMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "affineBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "affineMonogram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "affineMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "affineBigram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "affineBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "uniformMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "uniformBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "uniformMonogram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "uniformMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "uniformBigram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "uniformBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "recurrentMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 1, 10, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 1, 100, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 1, 1000, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 1, 10000, 1000, "recurrentBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "recurrentMonogram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "recurrentMonogram", "Structural criterion");
+    Writer.newLine();
+    Writer.write(data, 2, 10, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 2, 100, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 2, 1000, 10000, "recurrentBigram", "Structural criterion");
+    Writer.write(data, 2, 10000, 1000, "recurrentBigram", "Structural criterion");
+    Writer.newLine();
+    Writer.closeWriter();
   }
 }

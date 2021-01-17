@@ -1,0 +1,97 @@
+L,N,LgramLength,Algorithm name,Criteria name,False Negative
+10,10000,1,vigenereMonogram,Structural criterion,0.381
+100,10000,1,vigenereMonogram,Structural criterion,1.000
+1000,10000,1,vigenereMonogram,Structural criterion,1.000
+1000,10000,1,vigenereMonogram,Structural criterion,1.000
+10000,1000,1,vigenereMonogram,Structural criterion,0.558
+
+10,10000,1,vigenereBigram,Structural criterion,0.363
+100,10000,1,vigenereBigram,Structural criterion,1.000
+1000,10000,1,vigenereBigram,Structural criterion,1.000
+1000,10000,1,vigenereBigram,Structural criterion,1.000
+10000,1000,1,vigenereBigram,Structural criterion,0.000
+
+10,10000,2,vigenereMonogram,Structural criterion,0.379
+100,10000,2,vigenereMonogram,Structural criterion,1.000
+1000,10000,2,vigenereMonogram,Structural criterion,1.000
+1000,10000,2,vigenereMonogram,Structural criterion,1.000
+10000,1000,2,vigenereMonogram,Structural criterion,0.541
+
+10,10000,2,vigenereBigram,Structural criterion,0.354
+100,10000,2,vigenereBigram,Structural criterion,1.000
+1000,10000,2,vigenereBigram,Structural criterion,1.000
+1000,10000,2,vigenereBigram,Structural criterion,1.000
+10000,1000,2,vigenereBigram,Structural criterion,0.000
+
+10,10000,1,affineMonogram,Structural criterion,0.650
+100,10000,1,affineMonogram,Structural criterion,1.000
+1000,10000,1,affineMonogram,Structural criterion,1.000
+1000,10000,1,affineMonogram,Structural criterion,1.000
+10000,1000,1,affineMonogram,Structural criterion,1.000
+
+10,10000,1,affineBigram,Structural criterion,0.500
+100,10000,1,affineBigram,Structural criterion,1.000
+1000,10000,1,affineBigram,Structural criterion,1.000
+1000,10000,1,affineBigram,Structural criterion,1.000
+10000,1000,1,affineBigram,Structural criterion,1.000
+
+10,10000,2,affineMonogram,Structural criterion,0.646
+100,10000,2,affineMonogram,Structural criterion,1.000
+1000,10000,2,affineMonogram,Structural criterion,1.000
+1000,10000,2,affineMonogram,Structural criterion,1.000
+10000,1000,2,affineMonogram,Structural criterion,1.000
+
+10,10000,2,affineBigram,Structural criterion,0.507
+100,10000,2,affineBigram,Structural criterion,1.000
+1000,10000,2,affineBigram,Structural criterion,1.000
+1000,10000,2,affineBigram,Structural criterion,1.000
+10000,1000,2,affineBigram,Structural criterion,1.000
+
+10,10000,1,uniformMonogram,Structural criterion,0.363
+100,10000,1,uniformMonogram,Structural criterion,1.000
+1000,10000,1,uniformMonogram,Structural criterion,1.000
+1000,10000,1,uniformMonogram,Structural criterion,1.000
+10000,1000,1,uniformMonogram,Structural criterion,0.000
+
+10,10000,1,uniformBigram,Structural criterion,1.000
+100,10000,1,uniformBigram,Structural criterion,1.000
+1000,10000,1,uniformBigram,Structural criterion,1.000
+1000,10000,1,uniformBigram,Structural criterion,1.000
+10000,1000,1,uniformBigram,Structural criterion,0.000
+
+10,10000,2,uniformMonogram,Structural criterion,0.360
+100,10000,2,uniformMonogram,Structural criterion,1.000
+1000,10000,2,uniformMonogram,Structural criterion,1.000
+1000,10000,2,uniformMonogram,Structural criterion,1.000
+10000,1000,2,uniformMonogram,Structural criterion,0.000
+
+10,10000,2,uniformBigram,Structural criterion,1.000
+100,10000,2,uniformBigram,Structural criterion,1.000
+1000,10000,2,uniformBigram,Structural criterion,1.000
+1000,10000,2,uniformBigram,Structural criterion,1.000
+10000,1000,2,uniformBigram,Structural criterion,0.000
+
+10,10000,1,recurrentMonogram,Structural criterion,0.595
+100,10000,1,recurrentMonogram,Structural criterion,1.000
+1000,10000,1,recurrentMonogram,Structural criterion,1.000
+1000,10000,1,recurrentMonogram,Structural criterion,1.000
+10000,1000,1,recurrentMonogram,Structural criterion,1.000
+
+10,10000,1,recurrentBigram,Structural criterion,0.355
+100,10000,1,recurrentBigram,Structural criterion,1.000
+1000,10000,1,recurrentBigram,Structural criterion,1.000
+1000,10000,1,recurrentBigram,Structural criterion,1.000
+10000,1000,1,recurrentBigram,Structural criterion,1.000
+
+10,10000,2,recurrentMonogram,Structural criterion,0.588
+100,10000,2,recurrentMonogram,Structural criterion,1.000
+1000,10000,2,recurrentMonogram,Structural criterion,1.000
+1000,10000,2,recurrentMonogram,Structural criterion,1.000
+10000,1000,2,recurrentMonogram,Structural criterion,1.000
+
+10,10000,2,recurrentBigram,Structural criterion,0.356
+100,10000,2,recurrentBigram,Structural criterion,1.000
+1000,10000,2,recurrentBigram,Structural criterion,1.000
+1000,10000,2,recurrentBigram,Structural criterion,1.000
+10000,1000,2,recurrentBigram,Structural criterion,1.000
+

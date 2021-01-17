@@ -19,6 +19,101 @@ public class DataContainer {
   public static double entropy1;
   public static double entropy2;
 
+  // unused symbols
+  public static List<Character> unusedMonogram = new ArrayList<Character>() {{
+    add('ї');
+    add('ь');
+    add('ф');
+    add('щ');
+  }};
+
+  public static List<String> unusedBigram = new ArrayList<String>() {{
+    add("аь");
+    add("бь");
+    add("вь");
+    add("гь");
+    add("гю");
+    add("еи");
+    add("еь");
+    add("єє");
+    add("єи");
+    add("єь");
+    add("жь");
+    add("жю");
+    add("ии");
+    add("иь");
+    add("iь");
+    add("їи");
+    add("їь");
+    add("йи");
+    add("йь");
+    add("кь");
+    add("мь");
+    add("оь");
+    add("пї");
+    add("пй");
+    add("пь");
+    add("уи");
+    add("уь");
+    add("фб");
+    add("фв");
+    add("фг");
+    add("фє");
+    add("фж");
+    add("фї");
+    add("фй");
+    add("фх");
+    add("фц");
+    add("фч");
+    add("фш");
+    add("фщ");
+    add("фь");
+    add("фю");
+    add("хь");
+    add("хю");
+    add("цб");
+    add("цг");
+    add("цє");
+    add("цї");
+    add("цй");
+    add("цк");
+    add("цл");
+    add("цф");
+    add("цч");
+    add("цш");
+    add("цщ");
+    add("чф");
+    add("чш");
+    add("чь");
+    add("шь");
+    add("щб");
+    add("щв");
+    add("щг");
+    add("щє");
+    add("щж");
+    add("щї");
+    add("щй");
+    add("щк");
+    add("щл");
+    add("щм");
+    add("щр");
+    add("щс");
+    add("щт");
+    add("щф");
+    add("щц");
+    add("щч");
+    add("щш");
+    add("щщ");
+    add("щь");
+    add("щю");
+    add("ьи");
+    add("ьь");
+    add("юи");
+    add("юь");
+    add("яи");
+    add("яь");
+  }};
+
   public DataContainer() {
     init();
   }
@@ -32,7 +127,7 @@ public class DataContainer {
     entropy2 = calculateEntropyForBigrams(2, true, bigramsFrequency);
   }
 
-  // calculate bingam and monogram frequency
+  // calculate bigram and monogram frequency
   public static HashMap<String, Double> calculateFrequency(String text, int length) {
     HashMap<String, Double> frequency = new HashMap<>();
     switch (length) {
@@ -56,9 +151,35 @@ public class DataContainer {
       default:
         break;
     }
-
     return length == 1 ? toSymbolsStats(frequency, data.length()) :
         toSymbolsStats(frequency, data.length() - 1);
+  }
+
+  public static HashMap<String, Double> calculateFrequencyInCrit(String text, int length) {
+    HashMap<String, Double> frequency = new HashMap<>();
+    switch (length) {
+      case 1:
+        for (char letter : alphabet.toCharArray()) {
+          frequency.put(Character.toString(letter), 0.0);
+        }
+        for (char symbol : text.toCharArray()) {
+          frequency.computeIfPresent(Character.toString(symbol), (k, v) -> v = v + 1);
+        }
+        break;
+      case 2:
+        for (String bigram : bigrams) {
+          frequency.put(bigram, 0.0);
+        }
+        for (int i = 0; i < text.length() - 1; i++) {
+          frequency.computeIfPresent(Character.toString(text.charAt(i)) + text.charAt(i + 1),
+              (k, v) -> v = v + 1);
+        }
+        break;
+      default:
+        break;
+    }
+    return length == 1 ? toSymbolsStats(frequency, text.length()) :
+        toSymbolsStats(frequency, text.length() - 1);
   }
 
   public static HashMap<Character, Double> resetKey(HashMap<String, Double> calculateFrequency) {
@@ -285,7 +406,7 @@ public class DataContainer {
   }
   // finished shuffle
 
-  public String[] prepareTexts(int length, int quantity) {
+  public String[] prepareTexts(int L, int N, String algName) {
     final StringBuilder str = new StringBuilder();
     try {
       final BufferedReader in = new BufferedReader(
@@ -294,21 +415,46 @@ public class DataContainer {
               StandardCharsets.UTF_8));
       String line;
       while ((line = in.readLine()) != null) {
-        str.append(line.toLowerCase(Locale.ROOT).replace('ґ', 'г').replaceAll("[^а-яєії]", ""));
+        str.append(line.toLowerCase(Locale.ROOT)
+            .replace('ґ', 'г')
+            .replace('ъ', 'ь')
+            .replaceAll("[^а-яєії]", ""));
       }
       in.close();
     } catch (final IOException e) {
       e.printStackTrace();
     }
-    String[] texts = new String[quantity];
+    String[] texts = new String[N];
     int counter = 0;
-    for (int i = 0; i < quantity; i++) {
-      texts[i] = str.substring(counter, (counter + length));
+    for (int i = 0; i < N; i++) {
+      texts[i] = str.substring(counter, (counter + L));
       counter += 10;
     }
-    for (int i = 0; i < quantity; i++) {
-      texts[i] = vigenereBigramShuffle(texts[i]);
+    for (int i = 0; i < N; i++) {
+      texts[i] = getShuffleStr(algName, texts[i]);
     }
     return texts;
+  }
+
+  public String getShuffleStr(String algName, String text) {
+    switch (algName) {
+      case "vigenereMonogram":
+        return vigenereMonoShuffle(text);
+      case "vigenereBigram":
+        return vigenereBigramShuffle(text);
+      case "affineMonogram":
+        return affineMonoShuffle(text);
+      case "affineBigram":
+        return affineBigramShuffle(text);
+      case "uniformMonogram":
+        return uniformMonoShuffle(text);
+      case "uniformBigram":
+        return uniformBigramShuffle(text);
+      case "recurrentMonogram":
+        return recurrentMonoShuffle(text);
+      case "recurrentBigram":
+        return recurrentBigramShuffle(text);
+    }
+    return null;
   }
 }
